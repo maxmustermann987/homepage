@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Vielen Dank!</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,latin-ext" rel="stylesheet"
+    type="text/css">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Open Sans", sans-serif;
+      background: #333;
+      color: white;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    .main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      max-width: 364px;
+      padding: 24px;
+      color: rgb(14, 30, 37);
+      border-radius: 8px;
+    }
+
+    #back-link {
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 8px 32px;
+      border-radius: 50px;
+      transition: 0.5s;
+      margin: 10px;
+      color: white;
+      background: #dd0b2f;
+      text-decoration: none;
+    }
+
+    #back-link:hover {
+      background: white;
+      color: #dd0b2f;
+    }
+  </style>
+</head>
+
+<body cz-shortcut-listen="true">
+
+  <div class="main">
+    <div class="card">
+      <h2>Vielen Dank!</h2>
+      <p>Ihre Nachricht ist eingegangen. Ich werde mich schnellstmöglich bei Ihnen melden.</p>
+      <p><a id="back-link" href="https://dazzling-austin-f6f230.netlify.app/"><i class="ion-ios-arrow-left">
+          </i>Zurück</a>
+      </p>
+    </div>
+  </div>
+  <script>
+    //Code below makes sure that back link works relative to current URL, hard coded URL above in "a" is fallback only
+    (function () {
+      if (document.referrer && document.location.host && document.referrer.match(new RegExp("^https?://" + document.location.host))) {
+        document.getElementById("back-link").setAttribute("href", document.referrer);
+      }
+    })();
+  </script>
+
+</body>
+
+</html>
