@@ -215,7 +215,7 @@ window.addEventListener("load", () => {
   //get current full year
   const currentFullYear = currentDate.getFullYear();
   //when i started working
-  const startYear = 2005;
+  const startYear = 1999;
 
   
   document.querySelector(".experience").innerText = getYearsExperience(startYear, currentFullYear);
