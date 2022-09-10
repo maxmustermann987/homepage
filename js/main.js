@@ -217,7 +217,7 @@ window.addEventListener("load", () => {
   //when i started working
   const startYear = 2005;
 
-  document.querySelector(".availability").innerText = getAvailability(currentMonth, currentFullYear);
+  
   document.querySelector(".experience").innerText = getYearsExperience(startYear, currentFullYear);
 });
 
